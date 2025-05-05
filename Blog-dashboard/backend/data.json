@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1746456521631,
+      "name": "m",
+      "email": "mt@gmail.com",
+      "password": "mmmmmm"
+    },
+    {
+      "id": 1746474577582,
+      "name": "ms",
+      "email": "ms@gmail.com",
+      "password": "mmmmmm"
+    },
+    {
+      "id": 1746483311500,
+      "name": "mf",
+      "email": "mf@gmail.com",
+      "password": "mmmmmm"
+    },
+    {
+      "id": 1746485709930,
+      "name": "m",
+      "email": "mh@gmail.com",
+      "password": "mmmmmm"
+    },
+    {
+      "id": 1746486167042,
+      "name": "mk",
+      "email": "mk@gmail.com",
+      "password": "mmmmmm"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1746458194383,
+      "title": "test3",
+      "body": "test3",
+      "author": "ma",
+      "publishedAt": "2025-05-05T15:18:21.624Z"
+    },
+    {
+      "id": 1746469851559,
+      "title": "test5",
+      "body": "test5",
+      "author": "m",
+      "publishedAt": "2025-05-05T18:30:51.559Z"
+    },
+    {
+      "id": 1746470638823,
+      "title": "test6",
+      "body": "test6",
+      "author": "m",
+      "publishedAt": "2025-05-05T18:43:58.823Z"
+    },
+    {
+      "id": 1746470651271,
+      "title": "test7",
+      "body": "test7",
+      "author": "m",
+      "publishedAt": "2025-05-05T18:44:11.271Z"
+    },
+    {
+      "id": 1746484116641,
+      "title": "test10",
+      "body": "test10",
+      "author": "m",
+      "publishedAt": "2025-05-05T22:28:36.641Z"
+    },
+    {
+      "id": 1746484171243,
+      "title": "test11",
+      "body": "test11",
+      "author": "m",
+      "publishedAt": "2025-05-05T22:29:31.243Z"
+    },
+    {
+      "id": 1746484186935,
+      "title": "test",
+      "body": "test",
+      "author": "m",
+      "publishedAt": "2025-05-05T22:29:46.935Z"
+    },
+    {
+      "id": 1746484222777,
+      "title": "test2",
+      "body": "test2",
+      "author": "m",
+      "publishedAt": "2025-05-05T22:30:22.777Z"
+    },
+    {
+      "id": 1746486068777,
+      "title": "test",
+      "body": "test",
+      "author": "m",
+      "publishedAt": "2025-05-05T23:01:08.777Z",
+      "authorId": 1746485709930
+    }
+  ]
+}
