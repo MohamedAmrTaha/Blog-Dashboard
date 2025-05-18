@@ -6,10 +6,10 @@ export function signupUser(userData) {
     },
     body: JSON.stringify(userData),
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("User already exists.");
-        console.log("User already exists.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't signup user.");
         
       }
       console.log("User signed up successfully:", response);
@@ -29,9 +29,10 @@ export function loginUser(userData) {
     },
     body: JSON.stringify(userData),
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Can't login user.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't login user.");
       }
       console.log("User logged in successfully:", response);
       return response.json();
@@ -52,9 +53,10 @@ export function createPost(data) {
     },
     body: JSON.stringify(data.postData),
   })
-    .then((response) => {
+    .then(async(response) => {
       if (!response.ok) {
-        throw new Error("Can't create post.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't create post.");
       }
       console.log("Post created successfully:", response);
       return response.json();
@@ -73,9 +75,10 @@ export function getPosts(token) {
 
     },
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Can't get posts.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't get posts.");
       }
       console.log("Posts fetched successfully:", response);
       return response.json();
@@ -94,9 +97,10 @@ export function deletePost(data) {
       authorization: `Bearer ${data.token}`
     },
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Can't delete post.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't delete post.");
       }
       console.log("Post deleted successfully:", response);
       return response.json();
@@ -115,9 +119,10 @@ export function getPostById(data) {
       authorization: `Bearer ${data.token}`
     },
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Can't get post by ID.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't get post by ID.");
       }
       console.log("Post fetched successfully:", response);
       return response.json();
@@ -136,9 +141,10 @@ export function getUserPosts(token) {
       authorization: `Bearer ${token}`
     },
   })
-    .then((response) => {
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Can't get user posts.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Can't get user posts.");
       }
       console.log("User posts fetched successfully:", response);
       return response.json();

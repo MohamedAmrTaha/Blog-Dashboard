@@ -42,7 +42,7 @@ function Dashboard() {
       </h3>
 
       {isPending && <p className="text-gray-500">Loading posts...</p>}
-      {error && <p className="text-red-500">Failed to fetch posts.</p>}
+      {error && <p className="text-red-500">{error.message}</p>}
 
       {posts?.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">

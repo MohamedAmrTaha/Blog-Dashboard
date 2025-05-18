@@ -52,7 +52,7 @@ function PostDetails() {
   if (error)
     return (
       <p className="text-center text-red-500">
-        Error fetching post. Please try again.
+        {error.message }
       </p>
     );
 
@@ -61,7 +61,7 @@ function PostDetails() {
       <h2 className="text-2xl font-bold text-blue-600">
         {post?.title ?? "Untitled Post"}
       </h2>
-      <p className="mt-2 text-gray-700">
+      <p className="mt-2 text-gray-700 break-words">
         {post?.body ?? "No content available."}
       </p>
       <p className="mt-4 text-gray-500">
